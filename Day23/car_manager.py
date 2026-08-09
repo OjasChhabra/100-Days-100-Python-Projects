@@ -9,9 +9,10 @@ class CarManager:
     def __init__(self):
         self.all_cars = []
         self.car_speed = STARTING_MOVE_DISTANCE
+        self.car_chance = 5
 
     def create_car(self):
-        random_chance = randint(1,5)
+        random_chance = randint(1,self.car_chance)
         if random_chance == 1:
             new_car = Turtle("square")
             new_car.shapesize(1,2)

@@ -29,5 +29,7 @@ while game_is_on:
         player.start()
         car_manager.level_up()
         scoreboard.display()
+        if car_manager.car_chance > 0:
+            car_manager.car_chance -= 1
 
 screen.exitonclick()
